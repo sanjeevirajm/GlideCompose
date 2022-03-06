@@ -2,7 +2,6 @@
 Glide Composable version
 
 Demo: 
-
 val context = LocalContext.current
 GlideImage(
   modifier = Modifier.fillMaxSize(),
@@ -13,3 +12,7 @@ GlideImage(
     requestBuilder.centerCrop()
    }
 )
+
+It does these two things,
+* Properly cancels the image request
+* Gets the target size using BoxWithConstraints and loads image only for the target size
